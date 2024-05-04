@@ -1,0 +1,59 @@
+---
+layout: default
+dark: true
+permalink: /uninstall/
+noindex: true
+title: Uninstall
+description: Uninstall Feedback
+---
+
+<video id="bgvid" playsinline autoplay muted loop>
+    <source src="/media/loop1.webm" type="video/mp4" id="bgvidsrc">
+</video>
+
+<div class="d-flex flex-column h-100 align-items-center">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center w-100">
+        <div class="row flex-grow-1">
+            <div class="col-sm-12 col-md-8 col-lg-6 m-auto">
+                <div id="login-outer" class="m-auto p-3">
+                    <div class="justify-content-center align-items-center mb-2 d-flex">
+                        <img src="/media/logo.png" class="img-fluid float-start me-2" alt="{{ site.site_name }}" height="42" width="42">
+                        <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
+                    </div>
+                    <p class="text-center">
+                        Please let us know why you uninstalled {{ site.site_name }}.
+                        All <a href="{{ site.github_url }}/issues" target="_blank" rel="noopener">bugs that get reported</a> will be fixed!
+                        <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank" rel="noopener">Feature Requests</a> are also greatly appreciated...
+                    </p>
+                    <form id="uninstall-form">
+                        <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
+                        <div class="form-check form-switch fs-5">
+                            <input class="form-check-input" type="checkbox" role="switch" id="not-used">
+                            <label class="form-check-label text-success-emphasis" for="not-used">Do Not Need or Not Used</label>
+                        </div>
+                        <div class="form-check form-switch fs-5">
+                            <input class="form-check-input" type="checkbox" role="switch" id="not-expected">
+                            <label class="form-check-label text-warning-emphasis" for="not-expected">Does Not Work as Expected</label>
+                        </div>
+                        <div class="form-check form-switch fs-5">
+                            <input class="form-check-input" type="checkbox" role="switch" id="not-working">
+                            <label class="form-check-label text-danger-emphasis" for="not-working">Not Working or Broken</label>
+                        </div>
+                        <div class="my-2">
+                            <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
+                            <textarea class="form-control" id="uninstall-response" rows="4" maxlength="500"
+                                      placeholder="Optional Feedback. Bugs, Missing Features, etc..." autofocus></textarea>
+                            <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 500</span>
+                        </div>
+                        <button id="submit-btn" class="btn btn-success w-100" type="submit">
+                            Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
+                    </form>
+                    <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/uninstall.js"></script>
+

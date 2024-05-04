@@ -1,0 +1,52 @@
+---
+permalink: /screenshots/
+title: Screen Shots
+description: Screen Shots of the Open Links in New Tab Extension and Features.
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.site_name }} - {{ page.title }}</title>
+
+    <meta name="author" content="{{ site.author }}"/>
+    <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
+    <meta name="description" content="{{ site.site_name }} - {{ page.description }}"/>
+
+    <meta property="og:author" content="{{ site.author }}">
+    <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
+    <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.site_url }}{{ page.dir }}">
+    <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/screenshots.css">
+
+</head>
+<body>
+
+<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper" id="swiper-shots">
+        <!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper" id="swiper-thumbs">
+        <!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/js/vars.js"></script>
+<script type="text/javascript" src="/js/screenshots.js"></script>
+
+</body>
+</html>
