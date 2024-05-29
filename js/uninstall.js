@@ -3,8 +3,8 @@
 const searchParams = new URLSearchParams(window.location.search)
 const version = searchParams.get('version') || 'unknown'
 
-const uninstallMessage = 'Uninstall Feedback for Open Links in New Tab Extension.'
-const discordUsername = 'Open Links in New Tab'
+const uninstallMessage = `Open Links in New Tab Uninstall, Version: **${version}**`
+const discordUsername = 'Open In Tab'
 const discordAvatar = 'https://open-links-in-new-tab.cssnr.com/media/logo.png'
 
 const uninstallForm = document.getElementById('uninstall-form')
@@ -18,22 +18,22 @@ uninstallResponse.addEventListener('input', function () {
     inputCount.textContent = this.value.length
 })
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    const ver = searchParams.get('version')
-    const ok = '0.6.1'
-    if (ver) {
-        // const div = document.getElementById('version')
-        // div.textContent = `v${ver}`
-        const res = ver.localeCompare(ok, undefined, {
-            numeric: true,
-            sensitivity: 'base',
-        })
-        if (res === -1) {
-            console.debug(`Show Warning for Version: ${version}`)
-            document.getElementById('alerts')?.classList.remove('d-none')
-        }
-    }
-})
+// document.addEventListener('DOMContentLoaded', function (event) {
+//     const ver = searchParams.get('version')
+//     const ok = '0.6.1'
+//     if (ver) {
+//         // const div = document.getElementById('version')
+//         // div.textContent = `v${ver}`
+//         const res = ver.localeCompare(ok, undefined, {
+//             numeric: true,
+//             sensitivity: 'base',
+//         })
+//         if (res === -1) {
+//             console.debug(`Show Warning for Version: ${version}`)
+//             document.getElementById('alerts')?.classList.remove('d-none')
+//         }
+//     }
+// })
 
 async function formSubmit(event) {
     console.debug('formSubmit:', event)
