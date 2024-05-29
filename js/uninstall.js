@@ -1,7 +1,10 @@
 // JS uninstall.html
 
-const uninstallMessage = 'Uninstall Feedback for Open Links in New Tab Extension.'
-const discordUsername = 'Open Links in New Tab'
+const searchParams = new URLSearchParams(window.location.search)
+const version = searchParams.get('version') || 'unknown'
+
+const uninstallMessage = `Open Links in New Tab Uninstall, Version: **${version}**`
+const discordUsername = 'Open In Tab'
 const discordAvatar = 'https://open-links-in-new-tab.cssnr.com/media/logo.png'
 
 const uninstallForm = document.getElementById('uninstall-form')
@@ -11,19 +14,36 @@ const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
 
 uninstallForm.addEventListener('submit', formSubmit)
-uninstallResponse.addEventListener('input', function (e) {
+uninstallResponse.addEventListener('input', function () {
     inputCount.textContent = this.value.length
 })
 
+// document.addEventListener('DOMContentLoaded', function (event) {
+//     const ver = searchParams.get('version')
+//     const ok = '0.6.1'
+//     if (ver) {
+//         // const div = document.getElementById('version')
+//         // div.textContent = `v${ver}`
+//         const res = ver.localeCompare(ok, undefined, {
+//             numeric: true,
+//             sensitivity: 'base',
+//         })
+//         if (res === -1) {
+//             console.debug(`Show Warning for Version: ${version}`)
+//             document.getElementById('alerts')?.classList.remove('d-none')
+//         }
+//     }
+// })
+
 async function formSubmit(event) {
-    console.debug('formSubmit:', event, this)
+    console.debug('formSubmit:', event)
     event.preventDefault()
     errorAlert.style.display = 'none'
-    const url = this[0].value
-    const notUsed = this[1].checked
-    const notExpected = this[2].checked
-    const notWorking = this[3].checked
-    const feedbackText = this[4].value
+    const url = event.target.elements['discord-webhook'].value
+    const notUsed = event.target.elements['not-used'].checked
+    const notExpected = event.target.elements['not-expected'].checked
+    const notWorking = event.target.elements['not-working'].checked
+    const feedbackText = event.target.elements['uninstall-response'].value
     if (!(notUsed || notExpected || notWorking || feedbackText)) {
         return console.warn('No Data to Send.')
     }
