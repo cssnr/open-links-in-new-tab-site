@@ -20,18 +20,21 @@ description: Screen Shots of the Open Links in New Tab Extension and Features.
     <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
     <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.site_url }}{{ page.dir }}">
-    <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
+    <meta property="og:url" content="{{ "/" | absolute_url }}">
+    <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
 
-    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.css" integrity="sha512-8L/PDtOcxXEvVD1mWAzCBco7FQ/AHyG/bhg7yQpekicDmRwZA/iNDKpn+MJkYNEVg+qSLkxWLjsHtK781oAaWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/screenshots.css">
+    <link rel="stylesheet" href="{{ "/css/screenshots.css" | relative_url }}">
 
 </head>
 <body>
 
 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
     <div class="swiper-wrapper" id="swiper-shots">
+        {% comment %}<div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>{% endcomment %}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -39,12 +42,13 @@ description: Screen Shots of the Open Links in New Tab Extension and Features.
 </div>
 <div thumbsSlider="" class="swiper mySwiper">
     <div class="swiper-wrapper" id="swiper-thumbs">
+        {% comment %}<div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>{% endcomment %}
     </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js" integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript" src="/js/vars.js"></script>
-<script type="text/javascript" src="/js/screenshots.js"></script>
+<script type="text/javascript" src="{{ "/js/vars.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/js/screenshots.js" | relative_url }}"></script>
 
 </body>
 </html>
