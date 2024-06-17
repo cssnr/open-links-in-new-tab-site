@@ -13,11 +13,6 @@
     width: 100%;
 }
 
-/*.navbar,*/
-/*.footer {*/
-/*    background: rgba(0 0 0 / 30%);*/
-/*}*/
-
 footer li + li::before {
     content: '| ';
     margin-right: 8px;
