@@ -40,28 +40,28 @@
 <body class="d-flex flex-column h-100">
 
 <header>
-    <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid">
-            <a class="me-2" href="{{ "/" | relative_url }}">
-                <img src="{{ "/media/logo.png" | relative_url }}" width="24" height="24" alt="logo" class="my-auto"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="{{ "/" | relative_url }}">
-                            Home</a></li>
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="{{ "/docs/" | relative_url }}">
-                            Docs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ "/screenshots/" | relative_url }}" target="_blank">
-                            Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
-                            GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-sm" aria-label="Primary Navigation">
+    <div class="container-fluid">
+        <a class="me-2" href="{{ "/" | relative_url }}">
+            <img src="{{ "/media/logo.png" | relative_url }}" width="24" height="24" alt="logo" class="my-auto"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item"><a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="{{ "/" | relative_url }}">
+                        Home</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="{{ "/docs/" | relative_url }}">
+                        Docs</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ "/screenshots/" | relative_url }}" target="_blank">
+                        Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
+                        GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            </ul>
         </div>
+    </div>
     </nav>
 </header>
 
