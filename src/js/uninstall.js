@@ -4,8 +4,8 @@ const searchParams = new URLSearchParams(window.location.search)
 const version = searchParams.get('version') || 'unknown'
 
 const noAlertVersion = '0.2.0'
-const uninstallMessage = `Open Links in New Tab Uninstall, Version: **${version}**`
-const discordUsername = 'Open In Tab'
+const discordUsername = 'Open Links in New Tab'
+const uninstallMessage = `${discordUsername} Uninstall, Version: **${version}**`
 const discordAvatar = 'https://open-links-in-new-tab.cssnr.com/media/logo.png'
 
 const uninstallForm = document.getElementById('uninstall-form')
