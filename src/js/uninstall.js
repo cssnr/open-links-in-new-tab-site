@@ -1,12 +1,16 @@
 // JS uninstall.html
 
-const searchParams = new URLSearchParams(window.location.search)
-const version = searchParams.get('version') || 'unknown'
+const url = new URL(window.location)
+const redirect = new URL(url.origin)
+redirect.searchParams.append('feedback', 'yes')
+redirect.pathname = '/docs/'
+
+const version = url.searchParams.get('version') || 'unknown'
 
 const noAlertVersion = '0.2.0'
 const discordUsername = 'Open Links in New Tab'
 const uninstallMessage = `${discordUsername} Uninstall, Version: **${version}**`
-const discordAvatar = 'https://open-links-in-new-tab.cssnr.com/media/logo.png'
+const discordAvatar = 'https://link-extractor.cssnr.com/media/logo.png'
 
 const uninstallForm = document.getElementById('uninstall-form')
 const uninstallResponse = document.getElementById('uninstall-response')
@@ -22,10 +26,9 @@ uninstallResponse.addEventListener('input', function () {
     inputCount.textContent = this.value.length
 })
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    const ver = searchParams.get('version')
-    if (ver) {
-        const res = ver.localeCompare(noAlertVersion, undefined, {
+document.addEventListener('DOMContentLoaded', function () {
+    if (version) {
+        const res = version.localeCompare(noAlertVersion, undefined, {
             numeric: true,
             sensitivity: 'base',
         })
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 function formChange(event) {
-    console.debug('formChange:', event)
+    // console.debug('formChange:', event)
     if (event.target.id === 'not-working') {
         if (event.target.checked) {
             notWorkingExtra.classList.remove('d-none')
@@ -78,11 +81,10 @@ async function formSubmit(event) {
     // console.debug('lines:', lines)
 
     const response = await sendDiscord(url, lines.join('\n'))
-    console.debug('response:', response)
+    // console.debug('response:', response)
     submitBtn.classList.remove('disabled')
     if (response.status >= 200 && response.status <= 299) {
-        console.debug('Success')
-        window.location = '/docs/'
+        window.location = redirect
     } else {
         console.warn(`Error ${response.status}`, response)
         errorAlert.textContent = `Error ${response.status}: ${response.statusText}`
