@@ -7,7 +7,7 @@ redirect.pathname = '/docs/'
 
 const version = url.searchParams.get('version') || 'unknown'
 
-const noAlertVersion = '0.2.0'
+const noAlertVersion = '0.2.2'
 const discordUsername = 'Open Links in New Tab'
 const uninstallMessage = `${discordUsername} Uninstall, Version: **${version}**`
 const discordAvatar = 'https://link-extractor.cssnr.com/media/logo.png'
