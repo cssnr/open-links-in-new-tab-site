@@ -4,6 +4,7 @@
 [![Mozilla Add-on Version](https://img.shields.io/amo/v/open-links-in-new-tab?label=firefox&logo=firefox)](https://addons.mozilla.org/addon/open-links-in-new-tab)
 [![GitHub Release Version](https://img.shields.io/github/v/release/cssnr/open-links-in-new-tab?logo=github)](https://github.com/cssnr/open-links-in-new-tab/releases/latest)
 [![Pages](https://github.com/cssnr/open-links-in-new-tab-site/actions/workflows/build.yaml/badge.svg)](https://github.com/cssnr/open-links-in-new-tab-site/actions/workflows/build.yaml)
+[![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
 # Open Links in New Tab Site
 
 *   Website: https://open-links-in-new-tab.cssnr.com
