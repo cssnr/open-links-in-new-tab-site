@@ -1,4 +1,4 @@
-[![Pages](https://img.shields.io/github/actions/workflow/status/cssnr/open-links-in-new-tab/pages.yaml?logo=github&logoColor=white&label=pages)](https://github.com/cssnr/open-links-in-new-tab-site/actions/workflows/pages.yaml)
+[![Pages](https://img.shields.io/github/actions/workflow/status/cssnr/open-links-in-new-tab-site/pages.yaml?logo=github&logoColor=white&label=pages)](https://github.com/cssnr/open-links-in-new-tab-site-site/actions/workflows/pages.yaml)
 [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/efahmjakjnnmleokcaomicgfhobabdkc?logo=google&logoColor=white&label=google%20users)](https://chrome.google.com/webstore/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc)
 [![Mozilla Add-on Users](https://img.shields.io/amo/users/open-links-in-new-tab?logo=mozilla&label=mozilla%20users)](https://addons.mozilla.org/addon/open-links-in-new-tab)
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/efahmjakjnnmleokcaomicgfhobabdkc?label=chrome&logo=googlechrome)](https://chrome.google.com/webstore/detail/open-links-in-new-tab/efahmjakjnnmleokcaomicgfhobabdkc)
