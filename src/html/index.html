@@ -8,23 +8,25 @@ description: Modern Chrome Web Extension and Firefox Browser Addon for The Aviat
 <div class="container-fluid">
     <h1 class="animate__animated animate__zoomIn"><i class="fa-solid fa-up-right-from-square me-2"></i> {{ site.site_name }}</h1>
 
-    <div class="mb-2" style="min-height: 20px;">
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users"></a>
-        <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users"></a>
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/chrome-web-store/rating/{{ site.chrome_id }}?logo=google&logoColor=white" alt="Chrome Web Store Users"></a>
-        <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/amo/rating/{{ site.firefox_id }}?logo=mozilla&logoColor=white" alt="Mozilla Add-on Users"></a>
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version"></a>
-        <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version"></a>
-        <a href="{{ site.github_url }}/releases/latest" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version"></a>
+    <div class="mb-2" style="min-height: 28px;">
+        <a href="{{ site.chrome_url }}" title="Google" target="_blank" rel="noopener">
+            <img alt="Chrome Web Store Users" class="mb-1" src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?style=for-the-badge&logo=google&logoColor=white&label=google%20users"></a>
+        <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
+            <img alt="Mozilla Add-on Users" class="mb-1" src="https://img.shields.io/amo/users/{{ site.firefox_id }}?style=for-the-badge&logo=mozilla&label=mozilla%20users"></a>
+        <a href="{{ site.chrome_url }}" title="Google" target="_blank" rel="noopener">
+            <img alt="Chrome Web Store Rating" class="mb-1" src="https://img.shields.io/chrome-web-store/rating/{{ site.chrome_id }}?style=for-the-badge&logo=google&logoColor=white"></a>
+        <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
+            <img alt="Mozilla Add-on Rating" class="mb-1" src="https://img.shields.io/amo/rating/{{ site.firefox_id }}?style=for-the-badge&logo=mozilla&logoColor=white"></a>
+        <a href="{{ site.github_url }}" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Stars" class="mb-1" src="https://img.shields.io/github/stars/{{ site.github_name }}?style=for-the-badge&logo=github&logoColor=white"></a>
+        <a href="{{ site.chrome_url }}" title="Google" target="_blank" rel="noopener">
+            <img alt="Chrome Web Store Version" class="mb-1" src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?style=for-the-badge&label=chrome&logo=googlechrome"></a>
+        <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
+            <img alt="Mozilla Add-on Version" class="mb-1" src="https://img.shields.io/amo/v/{{ site.firefox_id }}?style=for-the-badge&label=firefox&logo=firefox"></a>
+        <a href="{{ site.github_url }}/releases/latest" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Release Version" class="mb-1" src="https://img.shields.io/github/v/release/{{ site.github_name }}?style=for-the-badge&logo=github"></a>
         <a href="{{ site.discord_invite }}" title="Discord" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da" alt="Join Discord"></a>
+            <img alt="Join Discord" class="mb-1" src="https://img.shields.io/discord/{{ site.discord_server }}?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=7289da"></a>
     </div>
 
     <p class="lead">
@@ -34,22 +36,22 @@ description: Modern Chrome Web Extension and Firefox Browser Addon for The Aviat
     <div class="d-flex mb-3 browser-icons" style="min-height: 48px;">
         <a href="{{ site.chrome_url }}" title="Chrome" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Chrome" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chrome_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
         <a href="{{ site.firefox_url }}" title="Firefox" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Firefox" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/firefox_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
         <a href="{{ site.chrome_url }}" title="Edge" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Edge" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/edge_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
         <a href="{{ site.chrome_url }}" title="Opera" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Opera" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/opera_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
         <a href="{{ site.chrome_url }}" title="Brave" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Brave" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/brave_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
         <a href="{{ site.chrome_url }}" title="Chromium" class="px-1 hvr-grow-lg" target="_blank" rel="noopener">
             <img alt="Chromium" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chromium_48.png" width="48" height="auto"
-                 class="mw-100 animate__animated animate__rotateIn" /></a>
+                 class="mw-100 animate__animated animate__rotateIn animate__slow" /></a>
     </div>
 
     <h2>Features</h2>
@@ -62,7 +64,7 @@ description: Modern Chrome Web Extension and Firefox Browser Addon for The Aviat
         <li>Activate from Icon, Context Menu, or Keyboard Shortcuts</li>
     </ul>
 
-    <p>To see more, view the <a class="" href="{{ "/screenshots/" | relative_url }}" target="_blank">Screen Shot Gallery</a>.</p>
+    <p>To see more, view the <a class="link-body-emphasis" href="{{ "/screenshots/" | relative_url }}">Screen Shot Gallery</a>.</p>
 
     <h3>Upcoming Features</h3>
     <ul>
@@ -110,7 +112,7 @@ description: Modern Chrome Web Extension and Firefox Browser Addon for The Aviat
         You can find additional apps on the
         <a href="https://cssnr.github.io/" class="" target="_blank" rel="noopener">CSSNR Website</a>
         as well as submit
-        <a href="https://cssnr.github.io/feedback/?app=Open%20Links%20in%20New%20Tab" class="" target="_blank" rel="noopener">
+        <a href="{{ site.feedback_link }}" class="" target="_blank" rel="noopener">
             General Feedback</a>.
     </p>
-</div>
+</div> <!-- container -->

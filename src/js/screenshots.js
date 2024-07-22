@@ -18,7 +18,7 @@ for (const shot of screenShots) {
 const swiper = new Swiper('.mySwiper', {
     freeMode: true,
     grabCursor: true,
-    loop: true,
+    loop: false,
     mousewheel: true,
     slidesPerView: 3,
     spaceBetween: 10,

@@ -7,7 +7,7 @@
     <title>{{ site.site_name }} - {{ page.title }}</title>
 
     {% if page.noindex %}
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="noindex">
     {% endif %}
 
     <meta name="author" content="{{ site.author }}"/>
@@ -33,6 +33,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 
+    {% if page.title == 'Documentation' %}
+        <link rel="stylesheet" href="{{ "/css/docs.css" | relative_url }}">
+    {% endif %}
+    {% if page.title == 'Screen Shots' %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.css" integrity="sha512-8L/PDtOcxXEvVD1mWAzCBco7FQ/AHyG/bhg7yQpekicDmRwZA/iNDKpn+MJkYNEVg+qSLkxWLjsHtK781oAaWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{ "/css/screenshots.css" | relative_url }}">
+    {% endif %}
     {% if page.title == 'Uninstall' %}
         <link rel="stylesheet" href="{{ "/css/uninstall.css" | relative_url }}">
     {% endif %}
@@ -81,33 +88,36 @@
     {{ content }}
 </main>
 
-<footer class="footer mt-auto px-1 flex-shrink-0 bg-body-tertiary">
-    <div class="container-fluid py-2">
-        <div class="d-flex flex-column flex-md-row">
-            <div class="me-md-auto">
-                <a class="text-decoration-none link-body-emphasis" href="{{ site.github_url }}" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> {{ site.site_name }}</a>
-            </div>
-            <div class="ms-md-auto">
-                <nav aria-label="Secondary Navigation">
-                    <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
-                        {% for item in site.menu %}
+
+{% if page.nofooter != true %}
+    <footer class="footer mt-auto px-1 flex-shrink-0 bg-body-tertiary">
+        <div class="container-fluid py-2">
+            <div class="d-flex flex-column flex-md-row">
+                <div class="me-md-auto mb-2 mb-md-0">
+                    <a class="text-decoration-none link-body-emphasis" href="{{ site.github_url }}" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> {{ site.site_name }}</a>
+                </div>
+                <div class="ms-md-auto">
+                    <nav aria-label="Secondary Navigation">
+                        <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
+                            {% for item in site.menu %}
+                                <li class="list-inline-item mb-2 mb-sm-0">
+                                    <a class="text-decoration-none link-body-emphasis {% if page.title == item.name %}fw-bold{% endif %}"
+                                       href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
+                                        {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
+                                </li>
+                            {% endfor %}
                             <li class="list-inline-item">
-                                <a class="text-decoration-none link-body-emphasis {% if page.title == item.name %}fw-bold{% endif %}"
-                                   href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
-                                    {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
+                                <a class="text-decoration-none link-body-emphasis" href="{{ site.discord_invite }}" target="_blank">
+                                    Discord <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
                             </li>
-                        {% endfor %}
-                        <li class="list-inline-item">
-                            <a class="text-decoration-none link-body-emphasis" href="{{ site.discord_invite }}" target="_blank">
-                                Discord <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
-                        </li>
-                    </ol>
-                </nav>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+{% endif %}
 
 <button type="button" class="btn btn-outline-secondary" id="back-to-top">
     <i class="fa-regular fa-square-caret-up"></i>

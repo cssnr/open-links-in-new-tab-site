@@ -9,11 +9,10 @@ site_name: Open Links in New Tab
 menu:
     - name: Home
       link: /
-    - name: Docs
+    - name: Documentation
       link: /docs/
     - name: Screen Shots
       link: /screenshots/
-      external: true
 
 github_name: cssnr/open-links-in-new-tab
 github_url: https://github.com/cssnr/open-links-in-new-tab
@@ -24,5 +23,8 @@ chrome_url: https://chromewebstore.google.com/detail/open-links-in-new-tab/efahm
 firefox_id: open-links-in-new-tab
 firefox_url: https://addons.mozilla.org/addon/open-links-in-new-tab
 
+discord_server: 899171661457293343
 discord_invite: https://discord.gg/wXy6m2X8wY
-discord_webhook: https://discord.com/api/webhooks/1258944618389569566/gqge0T5UZcJHLxfAFLPNjlzsuqikQJtTlCRvVWbw2ufDv_WrJ8yzVRWenb__s1PxyawH
+
+feedback_link: https://cssnr.github.io/feedback/?app=Open%20Links%20in%20New%20Tab
+relay_url: https://relay.cssnr.com/discord/1258944618389569566
