@@ -16,6 +16,7 @@ function domContentLoaded() {
         window.addEventListener('scroll', () => setTimeout(pinClick, 5000), {
             once: true,
         })
+        document.getElementById('new-install').classList.remove('d-none')
     }
     if (navigator.userAgent.includes('Firefox/')) {
         console.log('Detected Browser: Firefox')
