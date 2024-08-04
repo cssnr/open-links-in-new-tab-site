@@ -13,6 +13,9 @@ function domContentLoaded() {
         const pinNotice = document.getElementById('pin-notice')
         pinNotice.classList.remove('d-none')
         pinNotice.addEventListener('click', pinClick)
+        window.addEventListener('scroll', () => setTimeout(pinClick, 5000), {
+            once: true,
+        })
     }
     if (navigator.userAgent.includes('Firefox/')) {
         console.log('Detected Browser: Firefox')
@@ -35,10 +38,9 @@ function domContentLoaded() {
 /**
  * Pin Animation Click Callback
  * @function pinClick
- * @param {MouseEvent} event
  */
-function pinClick(event) {
-    const div = event.target.closest('div')
-    console.log('div:', div)
-    div.classList.add('d-none')
+function pinClick() {
+    const pinNotice = document.getElementById('pin-notice')
+    console.log('pinNotice:', pinNotice)
+    pinNotice.classList.add('d-none')
 }
