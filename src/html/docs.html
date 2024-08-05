@@ -2,7 +2,7 @@
 layout: default
 permalink: /docs/
 title: Documentation
-description: Documentation and Instructions for configuring and using Open Links in New Tab Extension.
+description: Documentation and Instructions for configuring and using Open Links in New Tab Web Extension.
 ---
 
 <div class="container-fluid">
@@ -28,14 +28,17 @@ description: Documentation and Instructions for configuring and using Open Links
         </p>
     </div>
 
-    {% comment %}{% include alerts.html %}{% endcomment %}
-
-    <div id="new-install" class="alert alert-warning d-none" role="alert">
+    <div id="new-install" class="alert alert-warning alert-dismissible d-none" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         <h4 class="alert-heading">Important</h4>
         <p class="mb-0">
             Tabs that were open when you installed this extension may need to be <b>reloaded</b> before this extension will function properly.
+            <br>
+            If you run into any issues or want to see new features, please <a class="alert-link" href="{{ "/#support" | relative_url }}">let us know</a>.
         </p>
     </div>
+
+    {% comment %}{% include alerts.html %}{% endcomment %}
 
 
     <h2 id="configure">Configure</h2>
